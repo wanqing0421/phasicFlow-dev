@@ -1,0 +1,26 @@
+// sphereGranFlowWithMonitoring 示例配置文件
+// 将此文件复制到您的案例目录并命名为 settingsDict
+
+// 时间控制
+timeControl
+{
+    startTime       0;
+    endTime         10;
+    dt              1e-5;
+    writeInterval   100;
+}
+
+// 监控框配置
+// 定义一个长方体区域，求解器会在每个时间步之前统计该区域内的颗粒数量
+// 如果数量为0，则停止模拟
+monitoringBox
+{
+    // 监控框的最小坐标点 (x, y, z)
+    minPoint (-0.1 -0.1 -0.1);
+    
+    // 监控框的最大坐标点 (x, y, z)
+    maxPoint ( 0.1  0.1  0.1);
+}
+
+// 其他配置参数...
+// （根据您的具体模拟需求添加）
